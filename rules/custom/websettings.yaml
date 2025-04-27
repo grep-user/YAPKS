@@ -1,0 +1,22 @@
+rules:
+  - id: websettings.1
+    patterns:
+      - pattern-either:
+            - pattern: android.webkit.WebSettings.setJavaScriptEnabled(...)
+            - pattern: android.webkit.WebSettings.setAllowFileAccess(...)
+
+    message: "sensitive websettings enabled"
+    languages: [java]
+    severity: ERROR
+
+  - id: Webview.1
+    patterns:
+      - pattern-either: 
+        - pattern: android.webkit.WebView.loadUrl(...)
+        - pattern: android.webkit.WebView.loadData(...)
+        - pattern: android.webkit.WebView.loadDataWithBaseURL(...)
+    message: "Loading data into webview"
+    languages: [java]
+    severity: ERROR
+
+

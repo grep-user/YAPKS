@@ -1,0 +1,37 @@
+rules:
+  - id: intent.1
+    patterns:
+      - pattern-either:
+          - pattern: getIntent()
+          - pattern: getIntent().$FUNC(...)
+    message: "getIntent()"
+    languages: [java]
+    severity: ERROR
+
+  - id: intent.2
+    patterns:
+      - pattern-either:
+          - pattern: startActivity()
+          - pattern: (...).startActivity(...)
+    message: "startactivity()"
+    languages: [java]
+    severity: ERROR
+    metadata:
+      owasp-web: a2
+      owasp-mobile: m7
+      cwe: cwe-1048
+      foo: Some extra metadata
+
+  - id: intent.3
+    patterns:
+      - pattern-either:
+          - pattern: startActivityForResult()
+          - pattern: (...).startActivityForResult(...)
+    message: "startactivity()"
+    languages: [java]
+    severity: ERROR
+    metadata:
+      owasp-web: a2
+      owasp-mobile: m7
+      cwe: cwe-1048
+      foo: Some extra metadata

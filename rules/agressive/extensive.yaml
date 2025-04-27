@@ -1,0 +1,7 @@
+rules:
+  - id: extensive.1
+    patterns:
+      - pattern-inside: setResult(...)
+    message: "setResult()"
+    languages: [java]
+    severity: ERROR

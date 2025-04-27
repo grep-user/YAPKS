@@ -1,0 +1,17 @@
+rules:
+  - id: sharedPrefs.1
+    patterns:
+      - pattern-inside: getSharedPreferences(...,1)
+    message: "getsharedPreference() MODE WORLD READABLE"
+    languages: [java]
+    severity: ERROR
+
+  - id: sharedPrefs.2
+    patterns:
+      - pattern-inside: getSharedPreferences(...,2)
+    message: "getsharedPreference() MODE WORLD WRITABLE"
+    languages: [java]
+    severity: ERROR
+
+
+

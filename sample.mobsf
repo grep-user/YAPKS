@@ -1,0 +1,34 @@
+---
+  ignore-paths:
+  - __MACOSX
+  - skip_dir
+
+  ignore-rules:
+  - android_hidden_ui
+  - hardcoded_password
+  - hardcoded_username
+  - hardcoded_api_key
+  - hardcoded_secret
+  - world_readable
+  - world_writeable
+  - aes_ecb_mode
+  - aes_ecb_mode_default
+  - aes_hardcoded_key
+  - cbc_padding_oracle
+  - cbc_static_iv
+  - java_insecure_random
+  - insecure_sslv3
+  - rsa_no_oeap
+  - sha1_hash
+  - weak_cipher
+  - weak_hash
+  - weak_iv
+  - weak_key_size
+  - android_kotlin_logging
+  - android_safetynet_api
+  - android_prevent_screenshot
+  - android_detect_tapjacking
+  - android_certificate_pinning
+  - android_root_detection
+  - android_certificate_transparency
+  - android_logging
